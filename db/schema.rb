@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200422004604) do
+ActiveRecord::Schema.define(version: 20200427190455) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "content"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 20200422004604) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
+  end
+
+  create_table "customers", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "phone"
+    t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "forums_users", id: false, force: :cascade do |t|
