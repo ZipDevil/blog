@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :customers
   resources :posts do
     resources :comments
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
     # patch  '/comments/:id',      to: 'comments#update'
     # delete '/comments/:id',      to: 'comments#destroy'
   end
-
+  resources :orders
   resources :pages
 
 end
