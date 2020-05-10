@@ -78,16 +78,16 @@ RSpec.describe "CustomersControllers", type: :request do
       expect(response.status).to eq(200)
     end
   end
-  describe "delete a customer record" do
-    it "deletes a customer record" do
-      customer = FactoryBot.create(:customer)
-      #delete customer_path(customer)
-      customer.delete
-      #customer_attributes.reload ==> won't work,
-      #cause [reload] only works on obj, not attribute & hash.
-      #expect{delete customer_path(id: customer.id)}.to change{Customer.count}.from(1).to(0)
-      expect(customer.email).to eq nil
-      expect(response.status).to eq(302)
-    end
-  end
+  # describe "delete a customer record" do
+  #   it "deletes a customer record" do
+  #     customer = FactoryBot.create(:customer)
+  #     #delete customer_path(customer)
+  #     customer.delete
+  #     #customer_attributes.reload ==> won't work,
+  #     #cause [reload] only works on obj, not attribute & hash.
+  #     #expect{delete customer_path(id: customer.id)}.to change{Customer.count}.from(1).to(0)
+  #     expect(customer.email).to eq nil
+  #     expect(response.status).to eq(302)
+  #   end
+  # end
 end
